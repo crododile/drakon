@@ -1,0 +1,131 @@
+
+
+
+
+head 
+  title='DRAKON'
+  link(href='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css' rel='stylesheet')
+
+block content
+  h1 DRAKON
+  p Welcome to DRAKON, I will introduce you and give you some time to get to know each other.
+  
+  h2 Simple Graph
+  #container.row
+    .col-xs-7
+        img(src='http://upload.wikimedia.org/wikipedia/commons/7/76/Going_out_in_DRAKON.png').img-responsive 
+    .col-xs-4
+       p.
+        A simple DRAKON graph. 
+        Note rounded corners for start and end statements, 
+        Square for internal changes, 
+        hexagon for conditional <br><br>
+        hexagon ~= "IF"<br><br>
+       
+        this would translate to ruby psuedocode as
+        def go_out<br>
+          get_dressed<br>
+          if (is_it_raining == true)<br>
+            take_umbrella<br>
+          else <br>
+            leave_apartment<br>
+          end<br>
+        end	 <br>
+        <br>
+        Which is easier to interpret, at a glance?<br>
+
+  h2 Another Simple Graph
+  #container.row
+    .col-xs-7
+      img(src='http://upload.wikimedia.org/wikipedia/commons/8/87/Workout_DRAKON.png').img-responsive 
+    .col-xs-4
+      p.
+        Here we have what amounts to an until loop.
+        Note the arrow-head.
+        While it may not be to hard to get the meaning without the arrow head,
+        DRAKON places the head because moving up goes against the basic
+        ergonomics of DRAKON. It ordinarily maintains downward flow.<br>
+
+
+h2 Fibonacci Graph, Drakon C
+#container-fluid.row
+  .col-xs-7
+    img(src='http://upload.wikimedia.org/wikipedia/commons/5/5e/Fibonacci_DRAKON.png' height='800').img-responsive
+  .col-xs-4
+    p.
+      This is a DRAKON C algorithm to create a fibonacci sequence
+      the icons have C syntax written inside of them, but
+      they retain the same meaning
+      It is no different from normal DRAKON in structure and flow
+      There are a couple of new features here.
+      First, prior to the beginning Icon, which contains
+      this block will not affect flow of the graph <br><br>
+
+      Of more general interest is the switch/case statement
+      It starts with the parallelogram containing 'n'
+      This reads is case n = 0, travel down the 0 line
+      case n =1, travel down the 1 line
+      the blank icon is the catch all
+      It is placed farthest to the right because it is considered
+      least desirable <br>
+      Underneath the catchall is another newcomer
+      The 'for' statement 
+      the two halves of the octagon mark the beginning and end
+      of the loop. The beginning contains the loop conditional
+      In this case, it contains the standard C for loop contents
+      Other graphs may contain plain language conditionals.
+      The statements within are executed in a looping fashion.
+      <br><br>
+      note the ease with which a loop can be identified at a glance.
+      <br><br>
+      The last thing to note here is how the 3 case statements
+      reunite and form a common line instead of all pointing
+      back to the 'return result' icon individualy
+      This is for improved flow and ease of reading, and is a
+      rule of DRAKON. It is also a rule that, on reuniting
+      These lines must flow right to left back towards the 
+      central skewer. <br>
+      Without assuming knowledge of C, it is possible to see what the algorithm is doing.<br>
+
+h3 "And", Ergonomically
+#container-flow.row
+  .col-xs-7
+    img(src='/images/anddecomposition.jpg').img-responsive
+  .col-xs-4
+    p.
+      These two graphs present an 'AND' statement, though the one on the left is prefered. Flow is maintained graphically instead of
+      with code. Fitting two items in an icon is no big deal, but following the preferred structure would be vital and much
+      more clear in the case of several condidtions chained together via 'AND'. LEFT = PREFERRED
+
+h3 "Goto-esque"
+#container-flow.row
+  .col-xs-7
+    img(src='/images/goto.jpg').img-responsive
+  .col-xs-4
+   p.
+    Note the upward pointing icons. They basically represent goto statements, however there is not
+    the true 'jump' as in a goto statement, because the arrow flows down out of the past statement, and around the graph
+    back to the top flow. More likely/desirable flows are ordered left to right, and the exit statement is likely
+    to the farthest right.	
+
+
+h3 Other Icons
+#container-flow.row
+  .col-xs-7
+    img(src='/images/drakon-icons.jpg').img-responsive
+  .col-xs-4
+   p.
+    By now the basic idea of DRAKON should be apparent to someone who is familiar with control flow. Here is a list of
+    the primary DRAKON icons. Icon 9, insertion, is basically a subroutine, which will be defined in a different DRAKON chart elsewhere. This is like factoring out a helper method in ordinary code. Item 10, the shelf, is jsut a grouping of actions.  For more explanation on icons 16-20, which may cause confusion, see the macroicons below.
+
+h3 Macroicons
+#container-flow.row
+  .col-xs-7
+    img(src='/images/macroicons.jpg').img-responsive
+  .col-xs-4
+   p.
+    Macroicons are groupings of icons to perform common operations. We saw some of these in the fibonacci graph. Item 1 passes parameters to the algorithm. The timers are literally timers. The dots on the lines are placeholders for unknown icons that may be on the path. 
+
+h2 Resources
+a(href='http://drakon-editor.sourceforge.net/language.html') Great Slideshows <br>
+a(href='http://en.wikipedia.org/wiki/DRAKON') Wikipedia, I probably honestly have more info here, but I took some of thier pictures
