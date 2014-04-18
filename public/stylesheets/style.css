@@ -6,3 +6,53 @@ body {
 a {
   color: #00B7FF;
 }
+
+.code{
+	position:absolute;
+	top:50px;
+	right: 300px;
+	font-size: 20pt;
+}
+
+.def{
+	position:absolute;
+	top:140px;
+	left:150px;
+}
+
+.variable{
+	position: absolute;
+	top: 140px;
+	left: 400px;
+}
+
+.action1{
+	position: absolute;
+	top: 230px;
+	left:150px;
+}
+
+.conditional{
+	position: absolute;
+	top: 380px;
+	left: 150px;
+}
+
+.trueAction{
+	position: absolute;
+	top: 450px;
+	left: 320px;
+}
+
+.falseAction{
+	position: absolute;
+	top: 500px;
+	left: 150px;
+}
+
+
+
+.moto{
+	font-size: 20px;
+	background-color:red;
+}
